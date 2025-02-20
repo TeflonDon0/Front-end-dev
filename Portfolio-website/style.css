@@ -252,7 +252,7 @@ a {
     position: absolute;
     top: 15px;
     display: block;
-    width: 80%;
+    width: 85%;
     object-fit: cover;
     mix-blend-mode: lighten;
 }
