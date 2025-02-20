@@ -1,0 +1,162 @@
+/* Existing styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #402E7A;
+    color: #FFFFFF;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    background: rgba(64, 46, 122, 0.088); /* Adds transparency to the hero-content background */
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    background-color: #4C3BCF;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: black;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #4B70F5;
+}
+
+.featured-posts {
+    padding: 50px 10%;
+}
+
+.featured-posts h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.posts-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.post {
+    background-color: #3DC2EC;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.post:hover {
+    transform: scale(1.05);
+}
+
+.newsletter {
+    background-color: #4C3BCF;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.newsletter h2 {
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.newsletter button {
+    background-color: #4B70F5;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #3DC2EC;
+}
+
+.content {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content ol {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.content a.cta {
+    background-color: #4C3BCF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.content a.cta:hover {
+    background-color: #4B70F5;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .posts-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post {
+        margin-bottom: 20px;
+    }
+}
