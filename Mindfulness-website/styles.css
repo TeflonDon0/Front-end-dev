@@ -18,7 +18,7 @@ body {
 
 .hero-content {
     max-width: 600px;
-    background: rgba(64, 46, 122, 0.088); /* Adds transparency to the hero-content background */
+    background: rgba(85, 46, 122, 0.077); /* Adds transparency to the hero-content background */
     padding: 40px;
     border-radius: 8px;
 }
@@ -37,6 +37,7 @@ body {
     background-color: #4C3BCF;
     color: #FFFFFF;
     border: none;
+    border-radius: 5px;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;

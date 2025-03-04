@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - NimizComputer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.ibb.co/bMrcQrJm/NIMIZ-LOGO-PNG.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="View and manage your shopping cart at NimizComputer.">
+    <meta name="keywords" content="shopping cart, NimizComputer, view cart, manage cart">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="https://i.ibb.co/bMrcQrJm/NIMIZ-LOGO-PNG.png"
+                        alt="NimizComputer Logo" id="logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search Products">
+                <button id="search-button">Search</button>
+            </div>
+            <div class="user-actions">
+                <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shopping Cart Section -->
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here using JavaScript -->
+        </div>
+        <div class="cart-summary">
+            <p>Subtotal: <span id="cart-subtotal">$0.00</span></p>
+            <p>Shipping: <span id="cart-shipping">$10.00</span></p>
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+        </div>
+    </section>
+
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <div class="checkout-steps">
+            <div class="step">
+                <h3>Shipping Information</h3>
+                <form id="shippingForm">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required>
+
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" id="zip" name="zip" required>
+
+                    <button type="submit">Continue to Payment</button>
+                </form>
+            </div>
+
+            <div class="step">
+                <h3>Payment Information</h3>
+                <form id="paymentForm">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required>
+
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="text" id="expiryDate" name="expiryDate" required>
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+
+                    <button type="submit">Review Order</button>
+                </form>
+            </div>
+
+            <div class="step">
+                <h3>Review Order</h3>
+                <div class="order-summary">
+                    <!-- Order details will be dynamically added here using JavaScript -->
+                </div>
+                <button id="placeOrder">Place Order</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 NimizComputer. All rights reserved.</p>
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <p>Contact Us: <a href="contact.html">Get in touch</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

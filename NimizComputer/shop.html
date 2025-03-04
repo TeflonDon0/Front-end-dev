@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - NimizComputer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.ibb.co/bMrcQrJm/NIMIZ-LOGO-PNG.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="Shop for high-quality electronics and home appliances at NimizComputer.">
+    <meta name="keywords" content="shop, electronics, home appliances, NimizComputer">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="https://i.ibb.co/bMrcQrJm/NIMIZ-LOGO-PNG.png"
+                        alt="NimizComputer Logo" id="logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search Products">
+                <button id="search-button">Search</button>
+            </div>
+            <div class="user-actions">
+                <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <aside id="shop-filters">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <h4>Category</h4>
+                <label><input type="checkbox" value="electronics"> Electronics</label><br>
+                <label><input type="checkbox" value="home-appliances"> Home Appliances</label><br>
+                <label><input type="checkbox" value="gaming-consoles"> Gaming Consoles</label>
+            </div>
+            <div class="filter-group">
+                <h4>Price</h4>
+                <label><input type="radio" name="price" value="0-500"> $0 - $500</label><br>
+                <label><input type="radio" name="price" value="500-1000"> $500 - $1000</label><br>
+                <label><input type="radio" name="price" value="1000+"> $1000+</label>
+            </div>
+            <div class="filter-group">
+                <h4>Sort By</h4>
+                <select id="sort-by">
+                    <option value="popularity">Popularity</option>
+                    <option value="price-low-to-high">Price: Low to High</option>
+                    <option value="price-high-to-low">Price: High to Low</option>
+                </select>
+            </div>
+            <button id="apply-filters">Apply Filters</button>
+            <button id="clear-filters">Clear Filters</button>
+        </aside>
+
+        <main id="product-grid">
+            <div class="product-item">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1740581903/user_uploads/eHwMihVgwnALMGJ/Screenshot-2025-02-26-at-15-57-40-NimizComputer.jpg"
+                    alt="Product">
+                <h3>Product Name</h3>
+                <p>Price: $XXX</p>
+                <a href="product.html?id=product-name" class="product-button">View Product</a>
+                <button class="add-to-cart" data-id="product-name">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="product-name">Add to Wishlist</button>
+            </div>
+             <div class="product-item">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1740581903/user_uploads/eHwMihVgwnALMGJ/Screenshot-2025-02-26-at-15-57-40-NimizComputer.jpg"
+                    alt="Product">
+                <h3>Product Name</h3>
+                <p>Price: $XXX</p>
+                <a href="product.html?id=product-name" class="product-button">View Product</a>
+                <button class="add-to-cart" data-id="product-name">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="product-name">Add to Wishlist</button>
+            </div>
+             <div class="product-item">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1740581903/user_uploads/eHwMihVgwnALMGJ/Screenshot-2025-02-26-at-15-57-40-NimizComputer.jpg"
+                    alt="Product">
+                <h3>Product Name</h3>
+                <p>Price: $XXX</p>
+                <a href="product.html?id=product-name" class="product-button">View Product</a>
+                <button class="add-to-cart" data-id="product-name">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="product-name">Add to Wishlist</button>
+            </div>
+             <div class="product-item">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1740581903/user_uploads/eHwMihVgwnALMGJ/Screenshot-2025-02-26-at-15-57-40-NimizComputer.jpg"
+                    alt="Product">
+                <h3>Product Name</h3>
+                <p>Price: $XXX</p>
+                <a href="product.html?id=product-name" class="product-button">View Product</a>
+                <button class="add-to-cart" data-id="product-name">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="product-name">Add to Wishlist</button>
+            </div>
+             <div class="product-item">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1740581903/user_uploads/eHwMihVgwnALMGJ/Screenshot-2025-02-26-at-15-57-40-NimizComputer.jpg"
+                    alt="Product">
+                <h3>Product Name</h3>
+                <p>Price: $XXX</p>
+                <a href="product.html?id=product-name" class="product-button">View Product</a>
+                <button class="add-to-cart" data-id="product-name">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="product-name">Add to Wishlist</button>
+            </div>
+             <div class="product-item">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1740581903/user_uploads/eHwMihVgwnALMGJ/Screenshot-2025-02-26-at-15-57-40-NimizComputer.jpg"
+                    alt="Product">
+                <h3>Product Name</h3>
+                <p>Price: $XXX</p>
+                <a href="product.html?id=product-name" class="product-button">View Product</a>
+                <button class="add-to-cart" data-id="product-name">Add to Cart</button>
+                <button class="add-to-wishlist" data-id="product-name">Add to Wishlist</button>
+            </div>
+        </main>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 NimizComputer. All rights reserved.</p>
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <p>Contact Us: <a href="contact.html">Get in touch</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
