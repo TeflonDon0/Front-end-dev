@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <header class="sticky-header">
         <!-- Header content (same as other pages) -->
@@ -31,20 +33,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="add-to-cart">
-            <div class="container">
-                <h3>Add Product to Cart</h3>
-                <form id="add-to-cart-form">
-                    <select id="product-select" required>
-                        <option value="">Select a product</option>
-                        <!-- Options will be dynamically populated with JavaScript -->
-                    </select>
-                    <input type="number" id="product-quantity" min="1" value="1" required>
-                    <button type="submit" class="btn add-to-cart-btn">Add to Cart</button>
-                </form>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -52,86 +40,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Cart functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const cartItems = document.getElementById('cart-items');
-            const cartTotal = document.getElementById('cart-total');
-            const addToCartForm = document.getElementById('add-to-cart-form');
-            const productSelect = document.getElementById('product-select');
-
-            // Sample product data (replace with your actual product data)
-            const products = [
-                { id: 1, name: 'Wireless Earbuds', price: 99.99 },
-                { id: 2, name: 'Smart Watch', price: 149.99 },
-                { id: 3, name: '4K Ultra HD TV', price: 799.99 }
-            ];
-
-            // Populate product select options
-            products.forEach(product => {
-                const option = document.createElement('option');
-                option.value = product.id;
-                option.textContent = product.name;
-                productSelect.appendChild(option);
-            });
-
-            // Initialize cart from localStorage or empty array
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-            // Function to update cart display
-            function updateCartDisplay() {
-                cartItems.innerHTML = '';
-                let total = 0;
-
-                cart.forEach((item, index) => {
-                    const product = products.find(p => p.id === item.id);
-                    const itemTotal = product.price * item.quantity;
-                    total += itemTotal;
-
-                    const itemElement = document.createElement('div');
-                    itemElement.classList.add('cart-item');
-                    itemElement.innerHTML = `
-                        <span>${product.name}</span>
-                        <span>$${product.price.toFixed(2)} x ${item.quantity}</span>
-                        <span>$${itemTotal.toFixed(2)}</span>
-                        <button class="remove-item" data-index="${index}">Remove</button>
-                    `;
-                    cartItems.appendChild(itemElement);
-                });
-
-                cartTotal.textContent = `Total: $${total.toFixed(2)}`;
-                localStorage.setItem('cart', JSON.stringify(cart));
-            }
-
-            // Add to cart form submission
-            addToCartForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const productId = parseInt(productSelect.value);
-                const quantity = parseInt(document.getElementById('product-quantity').value);
-
-                const existingItem = cart.find(item => item.id === productId);
-                if (existingItem) {
-                    existingItem.quantity += quantity;
-                } else {
-                    cart.push({ id: productId, quantity: quantity });
-                }
-
-                updateCartDisplay();
-                addToCartForm.reset();
-            });
-
-            // Remove item from cart
-            cartItems.addEventListener('click', function(e) {
-                if (e.target.classList.contains('remove-item')) {
-                    const index = parseInt(e.target.dataset.index);
-                    cart.splice(index, 1);
-                    updateCartDisplay();
-                }
-            });
-
-            // Initial cart display
-            updateCartDisplay();
-        });
-    </script>
 </body>
+
 </html>

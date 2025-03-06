@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <header class="sticky-header">
         <!-- Header content (same as other pages) -->
@@ -89,44 +91,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const orderItems = document.getElementById('order-items');
-            const orderTotal = document.getElementById('order-total');
-            const checkoutForm = document.getElementById('checkout-form');
-
-            // Retrieve cart from localStorage
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-            // Display order summary
-            function displayOrderSummary() {
-                orderItems.innerHTML = '';
-                let total = 0;
-
-                cart.forEach(item => {
-                    const itemElement = document.createElement('div');
-                    itemElement.classList.add('order-item');
-                    itemElement.textContent = `${item.name} x ${item.quantity}: $${(item.price * item.quantity).toFixed(2)}`;
-                    orderItems.appendChild(itemElement);
-                    total += item.price * item.quantity;
-                });
-
-                orderTotal.textContent = `Total: $${total.toFixed(2)}`;
-            }
-
-            displayOrderSummary();
-
-            // Handle form submission
-            checkoutForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Here you would typically send the order data to your server
-                alert('Order placed successfully!');
-                // Clear the cart after successful order
-                localStorage.removeItem('cart');
-                // Redirect to a thank you page or back to the home page
-                window.location.href = 'index.html';
-            });
-        });
-    </script>
 </body>
+
 </html>
